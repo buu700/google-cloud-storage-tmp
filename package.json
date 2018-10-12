@@ -221,7 +221,7 @@
     "storage"
   ],
   "license": "Apache-2.0",
-  "main": "./build/src/index.js",
+  "main": "./index.js",
   "name": "@google-cloud/storage",
   "nyc": {
     "exclude": [
@@ -234,6 +234,7 @@
   },
   "scripts": {
     "all-test": "npm test && npm run system-test && npm run samples-test",
+    "build": "webpack --config webpack.js ; sed -i 's|navigator\\.appName|global.BALLS|g' index.js ; echo -e '\\n\\nmodule.exports = index;' >> index.js",
     "check": "gts check",
     "clean": "gts clean",
     "codecov": "nyc report --reporter=json && codecov -f .coverage/*.json",

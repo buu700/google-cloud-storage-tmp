@@ -138,7 +138,7 @@
     "url": "git+https://github.com/googleapis/nodejs-storage.git"
   },
   "scripts": {
-    "build": "webpack --config webpack.js ; sed -i 's|navigator\\.appName|global.BALLS|g' index.js ; echo -e '\\n\\nmodule.exports = index;' >> index.js"
+    "build": "webpack --config webpack.js ; sed -i 's|navigator\\.appName|global.BALLS|g' index.js ; echo '\\n\\nmodule.exports = index;' >> index.js"
   },
   "version": "2.1.0"
 }
